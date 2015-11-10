@@ -7,7 +7,7 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" name="test1" template="Inchoo_UiExamples::example2.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="example2" template="Inchoo_UiExamples::example2.phtml" />
         </referenceContainer>
     </body>
 </page>

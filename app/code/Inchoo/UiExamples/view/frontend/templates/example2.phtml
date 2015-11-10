@@ -1,9 +1,17 @@
 
 <div data-bind="scope: 'hello'">
 
-    <div data-bind="html: helloMessage"></div>
+    <p data-bind="html: helloMessage"></p>
 
     <!-- ko template: getTemplate() --><!-- /ko -->
+
+    <!-- ko scope: requestChild('example2-child') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    <!-- /ko -->
+
+    <div data-bind="scope: requestChild('example2-child')">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
 
 </div>
 
@@ -12,11 +20,19 @@
         "*": {
             "Magento_Ui/js/core/app": {
                 "components": {
-                        "hello": {
-                            "component": "Inchoo_UiExamples/js/view/example2"
+                    "hello": {
+                        "component": "Inchoo_UiExamples/js/view/example2",
+
+                        "children": {
+
+                            "example2-child": {
+                                "component": "Inchoo_UiExamples/js/view/example2/child"
+                            }
+
                         }
                     }
                 }
             }
+        }
     }
 </script>
