@@ -1,4 +1,3 @@
-<p id="test1">example1.phtml template</p>
 
 <div data-bind="scope: 'hello'">
 
@@ -16,8 +15,6 @@
     </ul>
     <!-- /ko -->
 
-    <p data-bind="html: helloMethod()"></p>
-
 </div>
 
 <script type="text/x-magento-init">
@@ -26,7 +23,8 @@
             "Magento_Ui/js/core/app": {
                 "components": {
                     "hello": {
-                        "component": "Inchoo_UiExamples/js/view/example1"
+                        "component": "Inchoo_UiExamples/js/view/example4",
+                        "config": { "a": 1, "b": 2 }
                     }
                  }
             }

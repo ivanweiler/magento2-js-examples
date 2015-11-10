@@ -6,10 +6,11 @@ Goal
 3. Custom UiComponent that displays dynamic customer data ()
 
 
-getRegion vs child
+getRegion vs child - DONE!
 
 insertAfter and similar
 
-can template be inside element?
+Can Component template be inside html, referenced by id?
 
+observable helloArray, push something inside
 

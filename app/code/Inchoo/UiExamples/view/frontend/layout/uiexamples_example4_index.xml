@@ -3,11 +3,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="empty" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
     <update handle="uiexamples_kill_all"/>
     <head>
-        <title>Example 1</title>
+        <title>Example 4</title>
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" name="example1" template="Inchoo_UiExamples::example1.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="example4" template="Inchoo_UiExamples::example4.phtml" />
         </referenceContainer>
     </body>
 </page>

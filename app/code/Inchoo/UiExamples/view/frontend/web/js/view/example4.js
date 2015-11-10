@@ -10,7 +10,7 @@ define([
 
             this._super();
 
-            console.log("example1 component initialize");
+            console.log("example4 component initialize");
 
             this.helloMessage = "Hello world !";
             this.helloArray = this.helloMessage.split(' ');
