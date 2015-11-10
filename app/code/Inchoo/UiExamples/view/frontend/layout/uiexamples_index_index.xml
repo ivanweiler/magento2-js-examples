@@ -6,7 +6,7 @@
     </head>
     <body>
         <referenceContainer name="content">
-
+            <block class="Magento\Framework\View\Element\Template" name="test1" template="Inchoo_UiExamples::test1.phtml" />
         </referenceContainer>
 
         <referenceBlock name="messages" remove="true" />
@@ -17,6 +17,8 @@
 
         <referenceBlock name="customer.section.config" remove="true" />
         <referenceBlock name="customer.customer.data" remove="true" />
+
+        <referenceBlock name="translate" remove="true" />
 
     </body>
 </page>

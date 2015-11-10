@@ -5,6 +5,6 @@
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Inchoo_UiComponentExamples',
+    'Inchoo_UiExamples',
     __DIR__
 );

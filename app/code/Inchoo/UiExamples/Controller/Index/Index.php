@@ -1,6 +1,6 @@
 <?php
 
-namespace Inchoo\UiComponentExamples\Controller\Index;
+namespace Inchoo\UiExamples\Controller\Index;
 
 class Index extends \Magento\Framework\App\Action\Action
 {
