@@ -1,0 +1,32 @@
+
+<div data-bind="scope: 'hello'">
+
+    <!-- ko template: getTemplate() --><!-- /ko -->
+
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "hello": {
+                        "component": "Inchoo_UiExamples/js/view/example2",
+                        "children": {
+
+                            "example2-child": {
+                                "component": "Inchoo_UiExamples/js/view/example2/child"
+                            },
+
+                            "messages": {
+                                "component":"Magento_Ui/js/view/messages",
+                                "displayArea":"messages"
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
