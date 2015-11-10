@@ -3,6 +3,10 @@
 
     <!-- ko template: getTemplate() --><!-- /ko -->
 
+    <!-- ko foreach: getRegion('additional-container') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    <!-- /ko -->
+
 </div>
 
 <script type="text/x-magento-init">
@@ -11,16 +15,17 @@
             "Magento_Ui/js/core/app": {
                 "components": {
                     "hello": {
-                        "component": "Inchoo_UiExamples/js/view/example2",
+                        "component": "Inchoo_UiExamples/js/view/example3",
                         "children": {
 
                             "example2-child": {
-                                "component": "Inchoo_UiExamples/js/view/example2/child"
+                                "component": "Inchoo_UiExamples/js/view/example2/child",
+                                "displayArea":"additional-container"
                             },
 
                             "messages": {
                                 "component":"Magento_Ui/js/view/messages",
-                                "displayArea":"messages"
+                                "displayArea":"additional-container"
                             }
 
                         }
