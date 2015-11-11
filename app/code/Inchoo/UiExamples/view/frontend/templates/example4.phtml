@@ -1,7 +1,13 @@
 
 <div data-bind="scope: 'hello'">
 
-    <p data-bind="html: helloMessage"></p>
+    <!-- ko if: helloMessage -->
+    <p data-bind="text: helloMessage"></p>
+    <!-- /ko -->
+
+    <!-- ko if: helloMessage() -->
+    <p data-bind="text: helloMessage()"></p>
+    <!-- /ko -->
 
     <!-- ko if: helloArray().length -->
     <ul>
