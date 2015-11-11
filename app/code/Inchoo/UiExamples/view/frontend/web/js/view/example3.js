@@ -11,9 +11,9 @@ define([
         },
 
         initialize: function () {
-            this._super();
-
             console.log("example3 component initialize");
+
+            this._super();
 
             this.helloMessage = "Hello world !";
 

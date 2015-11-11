@@ -2,9 +2,8 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" name="test1" template="Inchoo_UiExamples::test1.phtml" />
-        </referenceContainer>
+
+        <!-- Removes all default uiComponent initializations from page -->
 
         <referenceBlock name="messages" remove="true" />
         <referenceBlock name="authentication-popup" remove="true" />

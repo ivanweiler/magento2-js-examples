@@ -1,0 +1,24 @@
+
+<div data-bind="scope: 'hello'">
+
+    <!-- ko if: helloMessage -->
+    <p data-bind="text: helloMessage"></p>
+    <!-- /ko -->
+
+    <button data-bind="click: clickMe">Click Me</button>
+
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "hello": {
+                        "component": "Inchoo_UiExamples/js/view/example5"
+                    }
+                 }
+            }
+        }
+    }
+</script>

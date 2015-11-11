@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="empty" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Example 5</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="example4" template="Inchoo_UiExamples::example5.phtml" />
+        </referenceContainer>
+
+        <referenceBlock name="messages" remove="true" />
+        <referenceBlock name="authentication-popup" remove="true" />
+        <referenceBlock name="pageCache" remove="true" />
+        <referenceBlock name="customer.section.config" remove="true" />
+        <!--referenceBlock name="customer.customer.data" remove="true" /-->
+        <referenceBlock name="translate" remove="true" />
+
+    </body>
+</page>

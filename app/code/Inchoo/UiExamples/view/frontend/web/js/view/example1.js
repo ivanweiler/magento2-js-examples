@@ -7,15 +7,13 @@ define([
     return Component.extend({
 
         initialize: function () {
-
-            this._super();
-
             console.log("example1 component initialize");
+
+            //initialize parent Component
+            this._super();
 
             this.helloMessage = "Hello world !";
             this.helloArray = this.helloMessage.split(' ');
-
-            //@todo: pass config from init
         },
 
         helloMethod: function() {
