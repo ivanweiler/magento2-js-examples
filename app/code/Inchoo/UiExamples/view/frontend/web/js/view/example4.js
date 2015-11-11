@@ -1,25 +1,34 @@
 
 define([
+    'ko',
     'uiComponent'
-], function (Component) {
+], function (ko, Component) {
     'use strict';
 
     return Component.extend({
 
-        initialize: function () {
-
-            this._super();
+        initialize: function(data) {
 
             console.log("example4 component initialize");
 
-            this.helloMessage = "Hello world !";
-            this.helloArray = this.helloMessage.split(' ');
+            console.log(data);
 
-            //@todo: pass config from init
+            this._super();
+
+            //this.helloMessage = "Hello world !";
+            //this.helloArray = ["Hello", "world", "!"];
+
+            this.helloMessage = ko.observable("Hello world !");
+            this.helloArray = ko.observableArray(["Hello", "world", "!"]);
+
         },
 
-        helloMethod: function() {
-            return "Hello method !";
+        addToArray: function() {
+
+            this.helloArray.push("Push");
+
+            console.log(this.helloArray);
+
         }
 
     });

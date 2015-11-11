@@ -3,17 +3,15 @@
 
     <p data-bind="html: helloMessage"></p>
 
-    <ul data-bind="foreach: helloArray">
-        <li data-bind="text: $data"></li>
-    </ul>
-
-    <!-- ko if: helloArray.length -->
+    <!-- ko if: helloArray().length -->
     <ul>
         <!-- ko foreach: { data: helloArray, as: 'item' } -->
         <li><!-- ko text: item --><!-- /ko --></li>
         <!-- /ko -->
     </ul>
     <!-- /ko -->
+
+    <button data-bind="click: addToArray">Click Me</button>
 
 </div>
 
@@ -24,7 +22,8 @@
                 "components": {
                     "hello": {
                         "component": "Inchoo_UiExamples/js/view/example4",
-                        "config": { "a": 1, "b": 2 }
+                        "config": { "a": 1, "b": 2 },
+                        "c": 3
                     }
                  }
             }
