@@ -1,5 +1,5 @@
 
-<div data-bind="scope: 'hello'">
+<div data-bind="scope: 'hello'" id="hello">
 
     <!-- ko if: helloMessage -->
     <p data-bind="text: helloMessage"></p>
@@ -9,6 +9,12 @@
 
 </div>
 
+<script type="text/x-magento-init">
+{"*": {"Magento_Ui/js/core/app": <?php echo $block->getJsLayout(); ?>}}
+</script>
+
+
+<?php /*
 <script type="text/x-magento-init">
     {
         "*": {
@@ -22,3 +28,4 @@
         }
     }
 </script>
+*/ ?>

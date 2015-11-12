@@ -6,13 +6,16 @@ Goal
 3. Custom UiComponent that displays dynamic customer data
 
 
-getRegion vs child - done, check getReagion logic again!
+getRegion vs child - done, check getRegion logic again!
 
 appendTo, prependTo, insertTo, parent, children - not now, not important?
 
 Can Component template be inside html, referenced by id?
 
 observable helloArray, push something inside - done
+
+compare local storage caching with pagecache logic
+
 
 
 Slides

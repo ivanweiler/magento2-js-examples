@@ -6,13 +6,30 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" name="example4" template="Inchoo_UiExamples::example5.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="example4" template="Inchoo_UiExamples::example5.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="types" xsi:type="array"/>
+                        <item name="components" xsi:type="array">
+                            <item name="hello" xsi:type="array">
+                                <item name="component" xsi:type="string">Inchoo_UiExamples/js/view/example5</item>
+                                <!--
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">Inchoo_UiExamples/example5</item>
+                                </item>
+                                -->
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
         </referenceContainer>
+
 
         <referenceBlock name="messages" remove="true" />
         <referenceBlock name="authentication-popup" remove="true" />
         <referenceBlock name="pageCache" remove="true" />
-        <referenceBlock name="customer.section.config" remove="true" />
+        <!--referenceBlock name="customer.section.config" remove="true" /-->
         <!--referenceBlock name="customer.customer.data" remove="true" /-->
         <referenceBlock name="translate" remove="true" />
 

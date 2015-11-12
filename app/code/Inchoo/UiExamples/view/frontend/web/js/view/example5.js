@@ -8,8 +8,7 @@ define([
 
     return Component.extend({
 
-        initialize: function(data) {
-            console.log("example5 component initialize");
+        initialize: function(data, d2) {
             this._super();
 
             this.helloMessage = ko.observable("Hello world !");
@@ -29,8 +28,11 @@ define([
 
         clickMe: function() {
 
-            this.helloMessage(this.customer.fullname);
-
+            if("fullname" in this.customer) {
+                this.helloMessage(this.customer.fullname);
+            } else {
+                this.helloMessage("Customer name not available, most likely not logged in.");
+            }
         }
 
     });
