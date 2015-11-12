@@ -20,10 +20,11 @@ define([
             this.customer = customerData.get('customer')();
             this.checkout = customerData.get('cart')();
 
-            //this.custom = customerData.get('custom')();
+            this.custom = customerData.get('custom')();
 
             console.log(this.customer);
             console.log(this.checkout);
+            console.log(this.custom);
         },
 
         clickMe: function() {
