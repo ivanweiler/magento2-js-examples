@@ -1,22 +1,22 @@
-Notes
+# Notes
 
-Knockout
+## Knockout
 http://knockoutjs.com/
 
 MVVM (Model-View-View Model) pattern
 
-Magento2 Ui Components
+## Magento2 Ui Components
 
-/Magento/Ui/view/base/web/js/core/app.js
-/Magento/Ui/view/base/web/js/core/renderer/layout.js
+/Magento/Ui/view/base/web/js/core/app.js  
+/Magento/Ui/view/base/web/js/core/renderer/layout.js  
 
-CustomComponent > uiComponent > uiElement > uiClass (not really accurate?)
+CustomComponent > uiComponent > uiElement > uiClass (not really accurate?)  
 
-uiComponent = /Magento/Ui/view/base/web/js/lib/core/collection.js
-uiElement = /Magento/Ui/view/base/web/js/lib/core/element/element.js
+* uiComponent = /Magento/Ui/view/base/web/js/lib/core/collection.js  
+* uiElement = /Magento/Ui/view/base/web/js/lib/core/element/element.js  
 
-
-Re-check getRegion logic
+## Reminders
+* Re-check getRegion logic
 
 
 
