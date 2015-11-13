@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="empty" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="uiexamples_kill_all"/>
+    <head>
+        <title>Example 6</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="example6"
+                   template="Inchoo_UiExamples::example6.phtml" />
+        </referenceContainer>
+    </body>
+</page>
