@@ -1,23 +1,31 @@
-<script type="text/html" id="hello-inline-template">
-    <p>Hello World !</p>
+
+<div data-bind="scope: 'hello'" id="hello">
+
+    <!-- ko if: helloMessage -->
+    <p data-bind="text: helloMessage"></p>
+    <!-- /ko -->
+
+    <button data-bind="click: clickMe">Click Me</button>
+
+</div>
+
+<script type="text/x-magento-init">
+{"*": {"Magento_Ui/js/core/app": <?php echo $block->getJsLayout(); ?>}}
 </script>
 
-<!-- ko template: getTemplate() -->
 
-    <p>Hello World !</p>
-
-<!-- /ko -->
-
+<?php /*
 <script type="text/x-magento-init">
     {
         "*": {
             "Magento_Ui/js/core/app": {
                 "components": {
                     "hello": {
-                        "component": "Inchoo_UiExamples/js/view/example6"
+                        "component": "Inchoo_UiExamples/js/view/example5"
                     }
-                }
+                 }
             }
         }
     }
 </script>
+*/ ?>

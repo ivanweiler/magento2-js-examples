@@ -2,11 +2,11 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="empty" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <title>Example 4</title>
+        <title>Example 1</title>
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" name="example4" template="Inchoo_UiExamples::example4.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="example1" template="Inchoo_UiExamples::example1.phtml" />
         </referenceContainer>
     </body>
 

@@ -5,13 +5,13 @@ define([
 
     return Component.extend({
         defaults: {
-            template: 'Inchoo_UiExamples/example2/child',
+            template: 'Inchoo_UiExamples/example4/child'
         },
 
         initialize: function () {
             this._super();
 
-            console.log("example2-child component initialize");
+            console.log("example4-child component initialize");
         }
     });
 });

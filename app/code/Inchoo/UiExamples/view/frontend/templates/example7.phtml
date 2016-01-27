@@ -1,11 +1,12 @@
+<script type="text/html" id="hello-inline-template">
+    <p>Hello World !</p>
+</script>
 
-<div data-bind="scope: 'hello'">
+<!-- ko template: getTemplate() -->
 
-    <p data-bind="html: helloMessage"></p>
+    <p>Hello World !</p>
 
-    <!-- ko template: getTemplate() --><!-- /ko -->
-
-</div>
+<!-- /ko -->
 
 <script type="text/x-magento-init">
     {
@@ -13,7 +14,7 @@
             "Magento_Ui/js/core/app": {
                 "components": {
                     "hello": {
-                        "component": "Inchoo_UiExamples/js/view/example3"
+                        "component": "Inchoo_UiExamples/js/view/example7"
                     }
                 }
             }

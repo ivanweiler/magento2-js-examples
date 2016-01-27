@@ -1,31 +1,37 @@
 
-<div data-bind="scope: 'hello'" id="hello">
+<div data-bind="scope: 'hello'">
 
-    <!-- ko if: helloMessage -->
-    <p data-bind="text: helloMessage"></p>
+    <!-- ko template: getTemplate() --><!-- /ko -->
+
+    <!-- ko foreach: getRegion('additional-container') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
     <!-- /ko -->
-
-    <button data-bind="click: clickMe">Click Me</button>
 
 </div>
 
-<script type="text/x-magento-init">
-{"*": {"Magento_Ui/js/core/app": <?php echo $block->getJsLayout(); ?>}}
-</script>
-
-
-<?php /*
 <script type="text/x-magento-init">
     {
         "*": {
             "Magento_Ui/js/core/app": {
                 "components": {
                     "hello": {
-                        "component": "Inchoo_UiExamples/js/view/example5"
+                        "component": "Inchoo_UiExamples/js/view/example5",
+                        "children": {
+
+                            "example4-child": {
+                                "component": "Inchoo_UiExamples/js/view/example4/child",
+                                "displayArea":"additional-container"
+                            },
+
+                            "messages": {
+                                "component":"Magento_Ui/js/view/messages",
+                                "displayArea":"additional-container"
+                            }
+
+                        }
                     }
-                 }
+                }
             }
         }
     }
 </script>
-*/ ?>

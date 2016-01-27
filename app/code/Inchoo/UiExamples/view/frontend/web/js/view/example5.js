@@ -1,39 +1,23 @@
 
 define([
-    'ko',
     'uiComponent',
-    'Magento_Customer/js/customer-data'
-], function (ko, Component, customerData) {
+    'Magento_Ui/js/model/messageList',
+], function (Component, messageList) {
     'use strict';
 
     return Component.extend({
-
-        initialize: function(data, d2) {
-            this._super();
-
-            this.helloMessage = ko.observable("Hello world !");
-
-            /**
-             * Local Storage (mage-cache-storage)
-             */
-            this.customer = customerData.get('customer')();
-            this.checkout = customerData.get('cart')();
-
-            this.custom = customerData.get('custom')();
-
-            console.log(this.customer);
-            console.log(this.checkout);
-            console.log(this.custom);
+        defaults: {
+            template: 'Inchoo_UiExamples/example3'
         },
 
-        clickMe: function() {
+        initialize: function () {
+            console.log("example5 component initialize");
 
-            if("fullname" in this.customer) {
-                this.helloMessage(this.customer.fullname);
-            } else {
-                this.helloMessage("Customer name not available, most likely not logged in.");
-            }
+            this._super();
+
+            this.helloMessage = "Hello world !";
+
+            messageList.addErrorMessage({ message: "Hello error message !" });
         }
-
     });
 });

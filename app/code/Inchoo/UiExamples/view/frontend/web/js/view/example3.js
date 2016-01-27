@@ -1,13 +1,12 @@
 
 define([
-    'uiComponent',
-    'Magento_Ui/js/model/messageList',
-], function (Component, messageList) {
+    'uiComponent'
+], function (Component) {
     'use strict';
 
     return Component.extend({
         defaults: {
-            template: 'Inchoo_UiExamples/example2',
+            template: 'Inchoo_UiExamples/example3'
         },
 
         initialize: function () {
@@ -16,8 +15,6 @@ define([
             this._super();
 
             this.helloMessage = "Hello world !";
-
-            messageList.addErrorMessage({ message: "Hello error message !" });
         }
     });
 });

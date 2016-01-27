@@ -1,17 +1,23 @@
 
 <div data-bind="scope: 'hello'">
 
-    <p data-bind="html: helloMessage"></p>
-
-    <!-- ko template: getTemplate() --><!-- /ko -->
-
-    <!-- ko scope: requestChild('example2-child') -->
-        <!-- ko template: getTemplate() --><!-- /ko -->
+    <!-- ko if: helloMessage -->
+    <p data-bind="text: helloMessage"></p>
     <!-- /ko -->
 
-    <div data-bind="scope: requestChild('example2-child')">
-        <!-- ko template: getTemplate() --><!-- /ko -->
-    </div>
+    <!-- ko if: helloMessage() -->
+    <p data-bind="text: helloMessage()"></p>
+    <!-- /ko -->
+
+    <!-- ko if: helloArray().length -->
+    <ul>
+        <!-- ko foreach: { data: helloArray, as: 'item' } -->
+        <li><!-- ko text: item --><!-- /ko --></li>
+        <!-- /ko -->
+    </ul>
+    <!-- /ko -->
+
+    <button data-bind="click: addToArray">Click Me</button>
 
 </div>
 
@@ -22,16 +28,10 @@
                 "components": {
                     "hello": {
                         "component": "Inchoo_UiExamples/js/view/example2",
-
-                        "children": {
-
-                            "example2-child": {
-                                "component": "Inchoo_UiExamples/js/view/example2/child"
-                            }
-
-                        }
+                        "config": { "a": 1, "b": 2 },
+                        "c": 3
                     }
-                }
+                 }
             }
         }
     }

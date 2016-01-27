@@ -1,23 +1,17 @@
 
 <div data-bind="scope: 'hello'">
 
-    <!-- ko if: helloMessage -->
-    <p data-bind="text: helloMessage"></p>
+    <p data-bind="html: helloMessage"></p>
+
+    <!-- ko template: getTemplate() --><!-- /ko -->
+
+    <!-- ko scope: requestChild('example4-child') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko if: helloMessage() -->
-    <p data-bind="text: helloMessage()"></p>
-    <!-- /ko -->
-
-    <!-- ko if: helloArray().length -->
-    <ul>
-        <!-- ko foreach: { data: helloArray, as: 'item' } -->
-        <li><!-- ko text: item --><!-- /ko --></li>
-        <!-- /ko -->
-    </ul>
-    <!-- /ko -->
-
-    <button data-bind="click: addToArray">Click Me</button>
+    <div data-bind="scope: requestChild('example2-child')">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
 
 </div>
 
@@ -27,11 +21,17 @@
             "Magento_Ui/js/core/app": {
                 "components": {
                     "hello": {
-                        "component": "Inchoo_UiExamples/js/view/example4",
-                        "config": { "a": 1, "b": 2 },
-                        "c": 3
+                        "component": "Inchoo_UiExamples/js/view/example3",
+
+                        "children": {
+
+                            "example4-child": {
+                                "component": "Inchoo_UiExamples/js/view/example4/child"
+                            }
+
+                        }
                     }
-                 }
+                }
             }
         }
     }
