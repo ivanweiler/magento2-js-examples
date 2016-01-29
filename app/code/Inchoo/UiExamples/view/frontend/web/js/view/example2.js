@@ -7,10 +7,10 @@ define([
 
     return Component.extend({
 
-        initialize: function(data) {
+        initialize: function(config) {
 
             console.log("example2 component initialize");
-            console.log(data);
+            console.log(config);
 
             this._super();
 
