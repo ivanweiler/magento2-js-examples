@@ -2,15 +2,23 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-
+        
         <!-- Removes all default uiComponent initializations from page -->
 
-        <referenceBlock name="messages" remove="true" />
-        <referenceBlock name="authentication-popup" remove="true" />
-        <referenceBlock name="pageCache" remove="true" />
-        <referenceBlock name="customer.section.config" remove="true" />
-        <referenceBlock name="customer.customer.data" remove="true" />
-        <referenceBlock name="translate" remove="true" />
+        <referenceBlock name="messages" remove="true"/>
+        <referenceBlock name="authentication-popup" remove="true"/>
+        <referenceBlock name="pageCache" remove="true"/>
+        <referenceBlock name="customer.section.config" remove="true"/>
+        <referenceBlock name="customer.customer.data" remove="true"/>
+        <referenceBlock name="translate" remove="true"/>
+        <referenceContainer name="frontend-storage-manager" remove="true"/>
+
+        <!-- Remove few other js block that are bloating html presentation -->
+        
+        <referenceBlock name="head.polyfill" remove="true"/>
+        <referenceBlock name="head.components" remove="true"/>
+        <referenceBlock name="js_cookies" remove="true"/>
+        <referenceBlock name="customer.data.invalidation.rules" remove="true"/>
 
     </body>
 </page>
