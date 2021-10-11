@@ -1,0 +1,22 @@
+
+<div data-bind="scope: 'hello'">
+
+    <p data-bind="html: helloMessage"></p>
+
+    <!-- ko template: getTemplate() --><!-- /ko -->
+
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "hello": {
+                        "component": "Favicode_UiExamples/js/view/example3"
+                    }
+                }
+            }
+        }
+    }
+</script>

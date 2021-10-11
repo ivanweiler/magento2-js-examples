@@ -1,0 +1,34 @@
+
+<div data-bind="scope: 'hello'">
+
+    <p data-bind="html: helloMessage"></p>
+
+    <ul data-bind="foreach: helloArray">
+        <li data-bind="text: $data"></li>
+    </ul>
+
+    <!-- ko if: helloArray.length -->
+    <ul>
+        <!-- ko foreach: { data: helloArray, as: 'item' } -->
+        <li><!-- ko text: item --><!-- /ko --></li>
+        <!-- /ko -->
+    </ul>
+    <!-- /ko -->
+
+    <p data-bind="html: helloMethod()"></p>
+
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "hello": {
+                        "component": "Favicode_UiExamples/js/view/example1"
+                    }
+                 }
+            }
+        }
+    }
+</script>

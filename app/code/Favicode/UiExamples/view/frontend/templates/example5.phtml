@@ -1,0 +1,37 @@
+
+<div data-bind="scope: 'hello'">
+
+    <!-- ko template: getTemplate() --><!-- /ko -->
+
+    <!-- ko foreach: getRegion('additional-container') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    <!-- /ko -->
+
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "hello": {
+                        "component": "Favicode_UiExamples/js/view/example5",
+                        "children": {
+
+                            "example4-child": {
+                                "component": "Favicode_UiExamples/js/view/example4/child",
+                                "displayArea":"additional-container"
+                            },
+
+                            "messages": {
+                                "component":"Magento_Ui/js/view/messages",
+                                "displayArea":"additional-container"
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>

@@ -1,0 +1,23 @@
+<script type="text/html" id="hello-inline-template">
+    <p>Hello World !</p>
+</script>
+
+<!-- ko template: getTemplate() -->
+
+    <p>Hello World !</p>
+
+<!-- /ko -->
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "hello": {
+                        "component": "Favicode_UiExamples/js/view/example7"
+                    }
+                }
+            }
+        }
+    }
+</script>

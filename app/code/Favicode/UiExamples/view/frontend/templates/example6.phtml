@@ -1,0 +1,31 @@
+
+<div data-bind="scope: 'hello'" id="hello">
+
+    <!-- ko if: helloMessage -->
+    <p data-bind="text: helloMessage"></p>
+    <!-- /ko -->
+
+    <button data-bind="click: clickMe">Click Me</button>
+
+</div>
+
+<script type="text/x-magento-init">
+{"*": {"Magento_Ui/js/core/app": <?php echo $block->getJsLayout(); ?>}}
+</script>
+
+
+<?php /*
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "hello": {
+                        "component": "Favicode_UiExamples/js/view/example5"
+                    }
+                 }
+            }
+        }
+    }
+</script>
+*/ ?>

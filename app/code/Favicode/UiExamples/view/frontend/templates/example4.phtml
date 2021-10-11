@@ -1,0 +1,38 @@
+
+<div data-bind="scope: 'hello'">
+
+    <p data-bind="html: helloMessage"></p>
+
+    <!-- ko template: getTemplate() --><!-- /ko -->
+
+    <!-- ko scope: requestChild('example4-child') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    <!-- /ko -->
+
+    <div data-bind="scope: requestChild('example4-child')">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "hello": {
+                        "component": "Favicode_UiExamples/js/view/example3",
+
+                        "children": {
+
+                            "example4-child": {
+                                "component": "Favicode_UiExamples/js/view/example4/child"
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>

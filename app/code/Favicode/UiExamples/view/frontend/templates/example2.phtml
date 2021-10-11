@@ -1,0 +1,38 @@
+
+<div data-bind="scope: 'hello'">
+
+    <!-- ko if: helloMessage -->
+    <p data-bind="text: helloMessage"></p>
+    <!-- /ko -->
+
+    <!-- ko if: helloMessage() -->
+    <p data-bind="text: helloMessage()"></p>
+    <!-- /ko -->
+
+    <!-- ko if: helloArray().length -->
+    <ul>
+        <!-- ko foreach: { data: helloArray, as: 'item' } -->
+        <li><!-- ko text: item --><!-- /ko --></li>
+        <!-- /ko -->
+    </ul>
+    <!-- /ko -->
+
+    <button data-bind="click: addToArray">Click Me</button>
+
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "hello": {
+                        "component": "Favicode_UiExamples/js/view/example2",
+                        "config": { "a": 1, "b": 2 },
+                        "c": 3
+                    }
+                 }
+            }
+        }
+    }
+</script>
